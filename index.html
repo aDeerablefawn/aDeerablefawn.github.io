@@ -1,22 +1,202 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>aDeerable</title>
-    <meta name="author" content="aDeerable">
-    <meta name="description" content="fun project by user aDeerable to explore building a website">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="og:site_name" content="aDeerable"/>
-    <meta name="og:description" content="Official website of aDeerable"/>
-    <meta name="og:image" content="/images/deerlogo.jpg">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-  </head>
-  <body>
-    <h1>currently under construction</h1>
-    <!-- <div> <img src="https://raw.githubusercontent.com/aDeerablefawn/aDeerablewebsite/main/images/deersite1.png" alt="deer here?" class="image-centered" height="30%" width="15%"> </div> -->
+<link rel="stylesheet" href="styles.css" />
+<script src="script.js"></script>
+    <!-- ============================================================
+         HEADER / NAVIGATIE
+    ============================================================ -->
+    <header class="navbar">
+        <div class="container navbar-inner">
+            <a href="#" class="logo">
+    <img src="https://raw.githubusercontent.com/aDeerablefawn/aDeerablewebsite/main/images/favicon.ico" 
+         alt="aDeerable" 
+         class="logo-icon">
+    aDeerable
+</a>
+            <nav class="nav-links">
+                <a href="javascript:void(0)" class="nav-button" id="openPopupBtn">Neem contact op</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ============================================================
+             HERO – met achtergrondafbeelding en fade bij scroll
+        ============================================================ -->
+        <section class="hero" id="hero">
+            <div class="hero-overlay"></div> <!-- voor de fade -->
+            <div class="container hero-content">
+                <h1>
+                    aDeerable
+                    <span>Marketing met een frisse blik</span>
+                </h1>
+                <!-- je kunt hier desgewenst nog een kleinere ondertitel toevoegen -->
+            </div>
+        </section>
+
+        <!-- ============================================================
+             INTRO – de eerste tekstblokken die verschijnen na de hero
+        ============================================================ -->
+        <section class="intro">
+            <div class="container intro-grid">
+                <h2>
+                    Je ziet je eigen bedrijf iedere dag.
+                </h2>
+                <div class="intro-text">
+                    <p>
+                        Daardoor worden bepaalde dingen vanzelfsprekend.
+                        Een externe blik kan juist zichtbaar maken wat
+                        een potentiële klant ervaart.
+                    </p>
+                    <br />
+                    <p>
+                        <span class="intro-highlight">
+                            Geen kritiek om de kritiek.
+                        </span>
+                        We brengen in kaart wat goed gaat,
+                        waar kansen liggen en wat eventueel beter kan.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+           DE REST VAN JE SECTIES (dienst, werkwijze, rapport, etc.)
+           – deze blijven ongewijzigd, maar ik herhaal ze hier voor de volledigheid
+        ============================================================ -->
+
+        <section id="dienst">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Van eerste indruk tot klantbeleving.</h2>
+                    <p>We bekijken je onderneming alsof we er voor het eerst mee kennismaken.</p>
+                </div>
+                <div class="service-grid">
+                    <article class="service-card">
+                        <div class="service-number">01</div>
+                        <h3>Eerste indruk</h3>
+                        <p>Wat ziet en ervaart een potentiële klant wanneer hij je bedrijf voor het eerst tegenkomt?</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-number">02</div>
+                        <h3>Positionering</h3>
+                        <p>Is duidelijk wat je aanbiedt, voor wie en waarom iemand voor jou zou kiezen?</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-number">03</div>
+                        <h3>Marketing</h3>
+                        <p>Hoe presenteer en communiceer je jouw aanbod naar potentiële klanten?</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-number">04</div>
+                        <h3>Uitstraling</h3>
+                        <p>Past je uitstraling bij je doelgroep, aanbod en gewenste imago?</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-number">05</div>
+                        <h3>Klantbeleving</h3>
+                        <p>Hoe verloopt de customer journey vanaf het eerste contact tot de aankoop?</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-number">06</div>
+                        <h3>Groei & kansen</h3>
+                        <p>Welke concrete kansen en verbeteringen zouden we als eerste testen?</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="werkwijze" class="process">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Van frisse blik naar actieplan.</h2>
+                </div>
+                <div class="process-list">
+                    <div class="process-item">
+                        <span class="process-number">01</span>
+                        <div>
+                            <h3>Kennismaking</h3>
+                            <p>We bespreken je onderneming, doelgroep en eventuele vragen.</p>
+                        </div>
+                        <span class="process-arrow">→</span>
+                    </div>
+                    <div class="process-item">
+                        <span class="process-number">02</span>
+                        <div>
+                            <h3>Analyse</h3>
+                            <p>We bekijken je onderneming vanuit marketing- en klantperspectief.</p>
+                        </div>
+                        <span class="process-arrow">→</span>
+                    </div>
+                    <div class="process-item">
+                        <span class="process-number">03</span>
+                        <div>
+                            <h3>Rapport</h3>
+                            <p>Je ontvangt een overzicht van sterke punten, kansen en aanbevelingen.</p>
+                        </div>
+                        <span class="process-arrow">→</span>
+                    </div>
+                    <div class="process-item">
+                        <span class="process-number">04</span>
+                        <div>
+                            <h3>Vervolg</h3>
+                            <p>We bespreken hoe je de aanbevelingen kunt implementeren.</p>
+                        </div>
+                        <span class="process-arrow">→</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       <!-- Knop om de popup te openen (past bij jouw bestaande knop) -->
+
+
+<!-- De Popup / Modal -->
+<div id="contactPopup" class="popup-overlay">
+    <div class="popup-container">
+
+        <!-- Sluitknop (X) -->
+        <span class="popup-close" id="closePopupBtn">&times;</span>
+
+        <!-- Twee kolommen: afbeelding links, formulier rechts -->
+        <div class="popup-grid">
+
+            <!-- Linkerkolom: afbeelding -->
+            <div class="popup-image">
+                <img src="https://raw.githubusercontent.com/aDeerablefawn/aDeerablewebsite/main/images/deer_popop_email.jpg"
+                     alt="aDeerable"
+                     style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px 0 0 20px;">
+                <!-- Vervang de URL hierboven door de URL van jouw "leuke herten-afbeelding" -->
+            </div>
+
+            <!-- Rechterkolom: formulier -->
+            <div class="popup-form">
+                <h2>Stuur een bericht</h2>
+                <p>Ik neem zo snel mogelijk contact met je op!</p>
+
+                <form id="contactForm" action="https://formsubmit.co/jesickarreman@gmail.com" method="POST">
+                    <input type="text" id="name" placeholder="Jouw naam" required>
+                    <input type="email" id="email" placeholder="Jouw e-mailadres" required>
+                    <textarea id="message" rows="4" placeholder="Jouw bericht..." required></textarea>
+                    <button type="submit" class="button button-primary" style="width: 100%; border: none; cursor: pointer;">
+                        Verstuur bericht
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    
+
+        
+      
+
+    </main>
+
     <footer>
-      <p><small>Made by aDeerable</small></p>
-      </footer>
-  </body>
-</html>
+        <div class="container footer-inner">
+            <p class="footer-copy">&copy; 2026 aDeerable</p>
+          
+        </div>
+    </footer>
