@@ -1,4 +1,13 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const closeBtn = document.getElementById('closePopupBtn');
+    const popup = document.getElementById('contactPopup');
 
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function() {
+            popup.style.display = 'none';
+        });
+    }
+});
 const openBtn = document.getElementById('openPopupBtn');
 const openBtn2 = document.getElementById('openPopupBtn2');
 const popup = document.getElementById('contactPopup');
