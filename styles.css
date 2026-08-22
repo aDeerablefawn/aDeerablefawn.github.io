@@ -19,7 +19,7 @@
 
 /* Alleen de p in de dienst-sectie */
 #dienst .section-header p {
-    color: #2d352d;  /* ⬅️ verander naar jouw gewenste kleur */
+    color: #1b1f1b  /* ⬅️ verander naar jouw gewenste kleur */
 }
 * {
     box-sizing: border-box;
