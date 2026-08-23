@@ -281,7 +281,7 @@ section {
 .what-we-do-bottom p {
     color: var(--text); /* donkere tekst voor leesbaarheid */
     margin: 0;
-    font-size: 1.08rem;
+    font-size: 1rem;
 }
 /* =========================
    DIENSTEN + PRIJZEN
@@ -387,7 +387,7 @@ section {
     display: flex;
     align-items: center;
     font-size: 1.8rem;
-    color: var(--accent-dark);
+    color: black;
     padding: 0 4px;
 }
 
