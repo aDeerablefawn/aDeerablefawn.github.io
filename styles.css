@@ -311,7 +311,7 @@ section {
    PROCESS SECTION
 ========================= */
 .process {
-    background: rgba(238, 240, 233, 0.85);
+    background: transparent;
     backdrop-filter: blur(2px);
     padding-top: 30px;
     padding-bottom: 30px;
