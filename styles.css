@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap');
 
+/* =========================
+   CSS VARIABLES
+========================= */
 :root {
     --bg: #f8f7f3;
     --surface: #ffffff;
@@ -13,14 +16,10 @@
     --radius-small: 14px;
     --max-width: 1120px;
 }
-#dienst .section-header h2 {
-    color: #363f35;  /* ⬅️ verander naar jouw gewenste kleur */
-}
 
-/* Alleen de p in de dienst-sectie */
-#dienst .section-header p {
-    color: #1b1f1b  /* ⬅️ verander naar jouw gewenste kleur */
-}
+/* =========================
+   RESET & BASE STYLES
+========================= */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -35,8 +34,8 @@ body {
     background: var(--bg);
     background-image: url("https://raw.githubusercontent.com/aDeerablefawn/aDeerablewebsite/main/images/fawn_layingdown_background.jpg");
     background-size: cover;
-    background-position: center 30%; /* ⬅️ pas aan: 30% = beeld iets lager zodat de fawn minder centraal staat */
-    background-attachment: fixed;    /* ⬅️ DIT MAAKT HEM FIXED */
+    background-position: center 30%;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     color: var(--text);
     font-family: "DM Sans", sans-serif;
@@ -53,32 +52,13 @@ img {
     display: block;
 }
 
-/* =========================
-   GLOBAL
-========================= */
-.logo-icon {
-    width: 30px;      /* pas aan naar gewenste grootte */
-    height: 30px;
-    object-fit: contain;
-    border-radius: 10px;  /* optioneel: als je afgeronde hoeken wilt */
-}
-.container {
-    width: min(100% - 40px, var(--max-width));
-    margin-inline: auto;
-}
-.footer-copy {
-    display: inline-block;        /* zodat de padding en rand alleen om de tekst zitten */
-    padding: 4px 14px;            /* ruimte binnen het randje */
-    border: 1.5px solid white;    /* het witte randje */
-    border-radius: 999px;         /* ronde hoeken (optioneel) */
-    background: rgba(0, 0, 0, 0.25); /* donkere transparante achtergrond zodat witte rand beter zichtbaar is */
-    color: white;                 /* witte tekst voor contrast */
-    font-weight: 500;             /* iets vetter voor leesbaarheid */
-}
-section {
-    padding: 100px 0;
+p {
+    color: var(--muted);
 }
 
+/* =========================
+   TYPOGRAPHY
+========================= */
 h1,
 h2,
 h3 {
@@ -99,123 +79,46 @@ h3 {
     font-size: 1.4rem;
 }
 
-p {
-    color: var(--muted);
+/* =========================
+   LAYOUT
+========================= */
+section {
+    padding: 100px 0;
+}
+
+.container {
+    width: min(100% - 40px, var(--max-width));
+    margin-inline: auto;
 }
 
 /* =========================
-   NAVIGATIE
+   NAVBAR
 ========================= */
-.price-tag {
-    margin-top: 20px;
-    padding: 8px 16px;
-    background: var(--accent);
-    border-radius: 999px;
-    font-family: "Outfit", sans-serif;
-    font-size: 1.3rem;
-    font-weight: 700;
-    display: inline-block;
-    color: var(--dark);
-}
-.process-flow {
-    display: flex;
-    align-items: stretch;
-    gap: 16px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.process-step {
-    flex: 1;
-    min-width: 180px;
-    max-width: 220px;
-    padding: 28px 20px;
-    background: white;
-    border-radius: var(--radius-small);
-    text-align: center;
-    border: 1px solid var(--border);
-}
-
-.step-number {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 50%;
-    background: var(--accent);
-    font-family: "Outfit", sans-serif;
-    font-weight: 700;
-    color: var(--dark);
-    margin-bottom: 16px;
-}
-
-.process-step h3 {
-    margin-bottom: 8px;
-    font-size: 1.1rem;
-}
-
-.process-step p {
-    font-size: 0.9rem;
-}
-
-.process-arrow {
-    display: flex;
-    align-items: center;
-    font-size: 1.8rem;
-    color: var(--accent-dark);
-    padding: 0 4px;
-}
-
-/* Responsive: op kleine schermen weer verticaal */
-@media (max-width: 800px) {
-    .process-flow {
-        flex-direction: column;
-        align-items: center;
-    }
-    .process-step {
-        max-width: 100%;
-        width: 100%;
-    }
-    .process-arrow {
-        transform: rotate(90deg);
-        padding: 4px 0;
-    }
-}
 .navbar {
-    position: relative;  /* of gewoon weglaten (default is static) */
-    z-index: 10;         /* mag blijven, maar is niet nodig */
-    padding: 22px 0;     /* behoud deze padding */
-    background: transparent; /* of var(--bg) als je een achtergrond wilt, maar hij verdwijnt met scrollen */
-    box-shadow: none;    /* verwijder de schaduw */
+    position: relative;
+    z-index: 10;
+    padding: 22px 0;
+    background: transparent;
+    box-shadow: none;
 }
 
-/* Als we later een witte achtergrond willen bij scrollen, kunnen we dit toevoegen */
 .navbar.scrolled {
     background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border);
 }
-/* Zorg dat de navbar-container 100% breed is */
-/* Zorg dat de navbar-container de volledige breedte gebruikt */
+
 .navbar .container {
     max-width: 100% !important;
-    padding: 0 30px;        /* ruime aan de zijkanten */
+    padding: 0 30px;
     margin: 0 !important;
 }
 
-/* Zorg dat logo en knop netjes uitgelijnd worden */
 .navbar-inner {
     display: flex;
-    justify-content: space-between;  /* logo links, knop rechts */
+    justify-content: space-between;
     align-items: center;
     width: 100%;
-}
-
-/* Zorg dat de nav-links alleen de contactknop bevat en geen extra ruimte inneemt */
-.nav-links {
-    display: flex;
-    align-items: center;
-    /* geen justify-content of gap nodig als er maar 1 item is */
 }
 
 .logo {
@@ -226,142 +129,19 @@ p {
     font-size: 1.45rem;
     font-weight: 700;
     letter-spacing: -0.04em;
-    color: white;  /* witte tekst op de donkere hero */
-}
-/* ---- Popup Overlay (donkere achtergrond) ---- */
-.popup-overlay {
-    display: none; /* Verborgen tot de knop wordt ingedrukt */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Donkere, ietwat doorzichtige laag */
-    z-index: 9999; /* Zorgt dat de popup boven alles zweeft */
-    justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(3px); /* Maakt de achtergrond een beetje wazig */
+    color: white;
 }
 
-/* ---- Popup Container (het witte vlak) ---- */
-.popup-container {
-    background: white;
-    max-width: 800px;
-    width: 90%;
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    position: relative;
-    max-height: 90vh;
-    overflow-y: auto;
-}
-
-/* ---- Sluitknop (X) ---- */
-.popup-close {
-    position: absolute;
-    top: 15px;
-    right: 25px;
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #aaa;
-    cursor: pointer;
-    transition: 0.3s;
-    z-index: 10;
-}
-.popup-close:hover {
-    color: #333;
-}
-
-/* ---- Grid met twee kolommen ---- */
-.popup-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    min-height: 450px;
-}
-
-/* ---- Linkerkolom: afbeelding ---- */
-.popup-image {
-    background: #f0f0f0;
-    border-radius: 20px 0 0 20px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* ---- Rechterkolom: formulier ---- */
-.popup-form {
-    padding: 40px 35px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.popup-form h2 {
-    margin-bottom: 5px;
-    font-family: "Outfit", sans-serif;
-}
-.popup-form p {
-    margin-bottom: 25px;
-    color: var(--muted);
-    font-size: 0.95rem;
-}
-.popup-form input,
-.popup-form textarea {
-    width: 100%;
-    padding: 12px 16px;
-    margin-bottom: 15px;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-small);
-    font-family: "DM Sans", sans-serif;
-    font-size: 1rem;
-    transition: 0.2s;
-    box-sizing: border-box;
-}
-.popup-form input:focus,
-.popup-form textarea:focus {
-    outline: none;
-    border-color: var(--accent-dark);
-    box-shadow: 0 0 0 3px rgba(139, 170, 104, 0.2);
-}
-
-/* ---- Responsive: op kleinere schermen de afbeelding verbergen ---- */
-@media (max-width: 700px) {
-    .popup-grid {
-        grid-template-columns: 1fr;
-    }
-    .popup-image {
-        display: none; /* Afbeelding verbergen op kleine schermen */
-    }
-    .popup-form {
-        padding: 30px 25px;
-    }
-}
-.logo-mark {
+.logo-icon {
     width: 30px;
     height: 30px;
-    display: grid;
-    place-items: center;
+    object-fit: contain;
     border-radius: 10px;
-    background: white;
-    color: var(--dark);
-    font-size: 0.85rem;
 }
 
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 32px;
-    font-size: 0.92rem;
-    font-weight: 600;
-    color: white; /* witte links op de hero */
-}
-
-.nav-links a {
-    transition: opacity 0.2s ease;
-}
-
-.nav-links a:hover {
-    opacity: 0.55;
 }
 
 .nav-button {
@@ -376,64 +156,28 @@ p {
     transform: translateY(-2px);
     background: #f0f0f0;
 }
-.what-we-do {
-    background: rgba(238, 240, 233, 0.85);
-    backdrop-filter: blur(2px);
-}
 
-.focus-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
-}
-
-.focus-item {
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-}
-
-.focus-number {
-    display: block;
-    margin-bottom: 25px;
-    font-family: "Outfit", sans-serif;
-    font-weight: 700;
-    color: var(--accent-dark);
-}
-
-.focus-item h3 {
-    margin-bottom: 12px;
-}
-
-.focus-item p {
-    color: var(--muted);
-}
 /* =========================
-   HERO – met achtergrondafbeelding en fade
+   HERO SECTION
 ========================= */
 .hero {
-    min-height: 100vh;               /* volledige viewport */
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
-    /* de afbeelding wordt als achtergrond gezet */
-   
-    /* standaard zichtbaar */
     opacity: 1;
-    transition: opacity 0.1s linear; /* vloeiend vervagen */
+    transition: opacity 0.1s linear;
 }
 
-/* Donkere overlay om de tekst beter leesbaar te maken */
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0); /* donkere laag, pas aan naar wens */
+    background: rgba(0, 0, 0, 0);
     z-index: 1;
 }
 
@@ -455,7 +199,7 @@ p {
 
 .hero h1 span {
     display: block;
-    font-size: 0.45em;   /* subtitel kleiner */
+    font-size: 0.45em;
     font-weight: 400;
     letter-spacing: 0.02em;
     margin-top: 10px;
@@ -463,11 +207,11 @@ p {
 }
 
 /* =========================
-   INTRO – deze komt na de hero, met normale achtergrond
+   INTRO SECTION
 ========================= */
 .intro {
-    background: rgba(23, 32, 28, 0.85); /* ⬅️ 85% dekkend, 15% doorzichtig */
-    backdrop-filter: blur(2px); /* ⬅️ licht vervagingseffect */
+    background: rgba(23, 32, 28, 0.85);
+    backdrop-filter: blur(2px);
     color: white;
 }
 
@@ -497,7 +241,7 @@ p {
 }
 
 /* =========================
-   REST VAN JE SECTIES – ongewijzigd
+   SECTION HEADER
 ========================= */
 .section-header {
     max-width: 650px;
@@ -512,18 +256,15 @@ p {
     font-size: 1.08rem;
 }
 
+/* =========================
+   SERVICES SECTION
+========================= */
 .service-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 18px;
 }
-#dienst .section-header {
-    background: rgba(255, 255, 255, 0.85);  /* wit met 85% dekking – zie je de achtergrond nog een beetje doorheen? */
-    padding: 30px 35px;                    /* ruimte binnen het vlak */
-    border-radius: 20px;                  /* afgeronde hoeken */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08); /* lichte schaduw voor diepte */
-    max-width: 700px;                     /* optioneel: max breedte, anders wordt het te breed */
-}
+
 .service-card {
     padding: 32px;
     background: var(--surface);
@@ -535,6 +276,10 @@ p {
 .service-card:hover {
     transform: translateY(-7px);
     box-shadow: 0 20px 45px rgba(23, 32, 28, 0.08);
+}
+
+.service-card h3 {
+    margin-bottom: 12px;
 }
 
 .service-number {
@@ -550,18 +295,28 @@ p {
     font-weight: 700;
 }
 
-.service-card h3 {
-    margin-bottom: 12px;
+.price-tag {
+    margin-top: 20px;
+    padding: 8px 16px;
+    background: var(--accent);
+    border-radius: 999px;
+    font-family: "Outfit", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    display: inline-block;
+    color: var(--dark);
 }
 
+/* =========================
+   PROCESS SECTION
+========================= */
 .process {
     background: rgba(238, 240, 233, 0.85);
     backdrop-filter: blur(2px);
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
-.process {
-    padding-top: 30px;     /* ⬅️ minder ruimte boven */
-    padding-bottom: 30px;  /* ⬅️ minder ruimte onder */
-}
+
 .process-list {
     display: grid;
     gap: 12px;
@@ -593,6 +348,117 @@ p {
     color: #9ba39d;
 }
 
+/* =========================
+   POPUP / MODAL
+========================= */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3px);
+}
+
+.popup-container {
+    background: white;
+    max-width: 800px;
+    width: 90%;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.popup-close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.popup-close:hover {
+    color: #333;
+}
+
+.popup-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    min-height: 450px;
+}
+
+.popup-image {
+    background: #f0f0f0;
+    border-radius: 20px 0 0 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-form {
+    padding: 40px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.popup-form h2 {
+    margin-bottom: 5px;
+    font-family: "Outfit", sans-serif;
+}
+
+.popup-form p {
+    margin-bottom: 25px;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.popup-form input,
+.popup-form textarea {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-small);
+    font-family: "DM Sans", sans-serif;
+    font-size: 1rem;
+    transition: 0.2s;
+    box-sizing: border-box;
+}
+
+.popup-form input:focus,
+.popup-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-dark);
+    box-shadow: 0 0 0 3px rgba(139, 170, 104, 0.2);
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer-copy {
+    display: inline-block;
+    padding: 4px 14px;
+    border: 1.5px solid white;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.25);
+    color: white;
+    font-weight: 500;
+}
+
 footer {
     padding: 35px 0;
     border-top: 1px solid var(--border);
@@ -615,45 +481,52 @@ footer {
     section {
         padding: 70px 0;
     }
+
     .nav-links {
         display: none;
     }
+
     .hero {
         min-height: 90vh;
     }
-    .intro-grid,
-    .report-box {
+
+    .intro-grid {
         grid-template-columns: 1fr;
         gap: 40px;
     }
+
     .service-grid {
         grid-template-columns: 1fr;
     }
+
     .process-item {
         grid-template-columns: 45px 1fr;
     }
+
     .process-arrow {
         display: none;
     }
-    .report-box {
-        padding: 35px 25px;
-    }
-    .price-card {
-        padding: 35px 25px;
-    }
-    .cta-box {
-        padding: 60px 25px;
-    }
+
     .footer-inner {
         flex-direction: column;
         gap: 10px;
         text-align: center;
     }
+
     .navbar {
-        background: rgba(0,0,0,0.3); /* iets donkerder op mobiel voor contrast */
+        background: rgba(0, 0, 0, 0.3);
     }
-    .logo, .nav-links {
-        color: white;
+
+    .popup-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .popup-image {
+        display: none;
+    }
+
+    .popup-form {
+        padding: 30px 25px;
     }
 }
 
@@ -661,18 +534,15 @@ footer {
     .container {
         width: min(100% - 28px, var(--max-width));
     }
+
     h1 {
         font-size: 3.2rem;
     }
+
     .hero h1 span {
         font-size: 0.5em;
     }
-    .hero-actions {
-        flex-direction: column;
-    }
-    .button {
-        width: 100%;
-    }
+
     .price {
         font-size: 3.2rem;
     }
