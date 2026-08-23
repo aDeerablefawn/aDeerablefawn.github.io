@@ -117,6 +117,70 @@ p {
     display: inline-block;
     color: var(--dark);
 }
+.process-flow {
+    display: flex;
+    align-items: stretch;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.process-step {
+    flex: 1;
+    min-width: 180px;
+    max-width: 220px;
+    padding: 28px 20px;
+    background: white;
+    border-radius: var(--radius-small);
+    text-align: center;
+    border: 1px solid var(--border);
+}
+
+.step-number {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background: var(--accent);
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 16px;
+}
+
+.process-step h3 {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.process-step p {
+    font-size: 0.9rem;
+}
+
+.process-arrow {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    color: var(--accent-dark);
+    padding: 0 4px;
+}
+
+/* Responsive: op kleine schermen weer verticaal */
+@media (max-width: 800px) {
+    .process-flow {
+        flex-direction: column;
+        align-items: center;
+    }
+    .process-step {
+        max-width: 100%;
+        width: 100%;
+    }
+    .process-arrow {
+        transform: rotate(90deg);
+        padding: 4px 0;
+    }
+}
 .navbar {
     position: relative;  /* of gewoon weglaten (default is static) */
     z-index: 10;         /* mag blijven, maar is niet nodig */
