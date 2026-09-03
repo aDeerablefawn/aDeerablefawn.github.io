@@ -341,15 +341,18 @@ section {
 ========================= */
 .cta-section {
     padding: 80px 0;
-    background: var(--bg);
+    background: transparent; /* sectie zelf doorzichtig */
 }
 
 .cta-box {
     max-width: 700px;
     margin: 0 auto;
-    padding: 40px 30px;
+    padding: 50px 40px;
+    background: rgba(255, 255, 255, 0.85); /* halfdoorzichtig wit */
+    backdrop-filter: blur(4px);            /* lichte vervaging, zoals bij .section-header */
+    border-radius: 32px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
     text-align: center;
-    background: transparent;
 }
 
 .cta-box h2 {
@@ -364,25 +367,26 @@ section {
     line-height: 1.6;
 }
 
-/* === GROTE, OPVALLENDE KNOP === */
+/* === OPVALLENDE KNOP === */
 .cta-button {
-    min-width: 260px;           /* breder */
-    padding: 18px 45px;         /* meer ruimte binnen de knop */
-    font-size: 1.15rem;         /* grotere tekst */
+    min-width: 260px;
+    padding: 18px 45px;
+    font-size: 1.15rem;
     font-weight: 700;
-    background: var(--dark);    /* donkere achtergrond */
+    background: var(--dark);
     color: white;
     border: none;
     border-radius: 999px;
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18); /* diepe schaduw */
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
     transition: all 0.3s ease;
     cursor: pointer;
+    display: inline-block;
 }
 
 .cta-button:hover {
-    transform: translateY(-4px);             /* zweeft iets omhoog */
+    transform: translateY(-4px);
     box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
-    background: var(--accent-dark);          /* kleurt groen bij hover */
+    background: var(--accent-dark);
     color: white;
 }
 /* =========================
