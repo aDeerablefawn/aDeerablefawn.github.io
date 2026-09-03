@@ -340,18 +340,16 @@ section {
    CALL TO ACTION (CTA)
 ========================= */
 .cta-section {
-    padding: 60px 0 40px;
-    background: var(--surface); /* WITTE ACHTERGROND voor de hele sectie */
-    border-radius: 32px;
-    margin: 0 20px 40px;
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.06);
+    padding: 80px 0;
+    background: var(--surface);
 }
 
 .cta-box {
-    padding: 40px 30px;
-    text-align: center;
     max-width: 700px;
     margin: 0 auto;
+    padding: 40px 30px;
+    text-align: center;
+    background: transparent;
 }
 
 .cta-box h2 {
@@ -366,10 +364,26 @@ section {
     line-height: 1.6;
 }
 
+/* === GROTE, OPVALLENDE KNOP === */
 .cta-button {
-    min-width: 220px;
-    padding: 16px 36px;
-    font-size: 1rem;
+    min-width: 260px;           /* breder */
+    padding: 18px 45px;         /* meer ruimte binnen de knop */
+    font-size: 1.15rem;         /* grotere tekst */
+    font-weight: 700;
+    background: var(--dark);    /* donkere achtergrond */
+    color: white;
+    border: none;
+    border-radius: 999px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18); /* diepe schaduw */
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    transform: translateY(-4px);             /* zweeft iets omhoog */
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+    background: var(--accent-dark);          /* kleurt groen bij hover */
+    color: white;
 }
 /* =========================
    PROCES (werkwijze)
