@@ -336,7 +336,42 @@ section {
     display: inline-block;
     color: var(--dark);
 }
+/* =========================
+   CALL TO ACTION (CTA)
+========================= */
+.cta-section {
+    padding: 80px 0 40px;
+    background: transparent;
+}
 
+.cta-box {
+    padding: 60px 50px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(4px);
+    border-radius: 32px;
+    text-align: center;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-box h2 {
+    margin: 0 0 16px 0;
+    color: var(--text);
+}
+
+.cta-box p {
+    margin: 0 0 30px 0;
+    font-size: 1.1rem;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.cta-button {
+    min-width: 220px;
+    padding: 16px 36px;
+    font-size: 1rem;
+}
 /* =========================
    PROCES (werkwijze)
 ========================= */
