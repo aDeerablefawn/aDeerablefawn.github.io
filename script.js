@@ -29,7 +29,13 @@ window.onclick = function(event) {
         popup.style.display = 'none';
     }
 }
-
+const ctaBtn = document.getElementById('openPopupBtnCta');
+if (ctaBtn) {
+    ctaBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('contactPopup').style.display = 'flex';
+    });
+}
 // --- Formulier verzenden (popup sluiten na versturen) ---
 document.getElementById('contactForm').onsubmit = function() {
     setTimeout(function() {
