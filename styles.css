@@ -341,7 +341,7 @@ section {
 ========================= */
 .cta-section {
     padding: 80px 0;
-    background: var(--surface);
+    background: var(--bg);
 }
 
 .cta-box {
